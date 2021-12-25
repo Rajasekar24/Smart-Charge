@@ -6,7 +6,7 @@ from win10toast import ToastNotifier
 import emoji
 
 toaster = ToastNotifier()
-debugMode = True
+debugMode = False
 action = "No Action"
 statusCode = "No Request Made"
 
@@ -55,7 +55,6 @@ if debugMode:
 
     with open('D:\\MY PROJECT\\Smart-Charge\\log.csv', mode='a') as log_file:
         log_writer = csv.writer(log_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
         # Date,    Time,    Battery Level,   ChargeState,    Action,    Status Code
         log_writer.writerow(
             [f"{dateTime.day}/{dateTime.month}/{dateTime.year}", dateTime.strftime("%X"), f"{str(currentCharge)}%",
