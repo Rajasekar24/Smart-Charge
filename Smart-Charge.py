@@ -6,7 +6,7 @@ from win10toast import ToastNotifier
 import emoji
 
 toaster = ToastNotifier()
-debugMode = False
+debugMode = True
 action = "No Action"
 statusCode = "No Request Made"
 
